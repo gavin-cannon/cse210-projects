@@ -1,5 +1,7 @@
 # cse210-student-template
 Gavin Cannon
+Dinosaur Git Test Text
+
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
