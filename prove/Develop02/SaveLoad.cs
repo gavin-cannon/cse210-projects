@@ -1,6 +1,6 @@
 public class SaveLoad{
     string filename = "journal.txt";
-    public void Save(Journal journal){
+public void Save(Journal journal){
     
 using (StreamWriter outputFile = new StreamWriter(filename))
 {
@@ -11,17 +11,19 @@ using (StreamWriter outputFile = new StreamWriter(filename))
 }
     }
 
-    public void Load(Journal journal){
+
+public void Load(Journal journal){
 string[] lines = System.IO.File.ReadAllLines(this.filename);
 
 foreach (string line in lines)
 {
-    string[] parts = line.Split(",");
+    string[] entryData = line.Split(",");
 
-    string date = parts[0];
-    string input = parts[1];
-    string prompt = parts[2];
-    journal._entryList.Add(new Entry(prompt, input, date));
+    string date = entryData[0];
+    string input = entryData[1];
+    string prompt = entryData[2];
+    Entry entryToLoad = new Entry(prompt, input, date);
+    journal._entryList.Add(entryToLoad);
 }
     }
    

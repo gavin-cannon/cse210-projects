@@ -8,7 +8,6 @@ public class Entry{
         this._EntryInput = entryInput;
         DateTime now = DateTime.Now;
         this._EntryDate = now.ToShortDateString();
-
     }
     public Entry(string entryPrompt, string entryInput, string date){
         this._EntryPrompt = entryPrompt;

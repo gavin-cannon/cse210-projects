@@ -8,7 +8,10 @@ public class Journal
     // _loadFromFile;
 
     public void Display(){
-        Console.Write("HELLO");
+        foreach (Entry entry in _entryList)
+        {
+            Console.WriteLine($"{entry._EntryDate}, {entry._EntryPrompt}, {entry._EntryInput}");
+        }
     }
     public void AddEntry(Entry entry){
         _entryList.Add(entry);
