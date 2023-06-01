@@ -9,11 +9,9 @@ class Program
         string userInput = Console.ReadLine();
         Scripture theScripture = new Scripture();
         theScripture.LoadScripture();
-        int difficulty = 0;
         string displayScripture = "";
        do{
-        displayScripture = theScripture.ListToVerse(difficulty);
-        difficulty++;
+        displayScripture = theScripture.ListToVerse();
         Console.Write(displayScripture);
         string userInput2 = Console.ReadLine();
         } while (displayScripture != "");

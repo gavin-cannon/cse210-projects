@@ -1,5 +1,5 @@
 public class Load{
-    public string GetScripture(){
+    public void GetScripture(){
         string[] fullScriptures = System.IO.File.ReadAllLines("scriptures.txt");
         Scripture scripture1 = new Scripture();
         Word word1 = new Word("Instantiate");
@@ -19,6 +19,6 @@ public class Load{
             
         }
         new Scripture();
-        return "tavares";
+    
     }
 }

@@ -16,29 +16,35 @@ public Scripture(){
     public void AddToList(Word word){
         _scripture.Add(word);
     }
-    public string ListToVerse(int difficulty){
+    public string ListToVerse(){
         Random rnd = new Random();
         int num = rnd.Next(_scripture.Count);
         string newString = "";
         int index = 0;
+        bool finished = true;
         foreach (Word item in _scripture){
             if(item.getHidden() != true){
-newString += item.getWord() + " ";
+                newString += item.getWord() + " ";
+                finished = false;
             }
             else{
-                // for(int i = 0; i < item.getWord().Count; i++){
-                //     newString += "_";
-                // }
+                for(int i = 0; i < item.getWord().Length; i++){
+                    newString += "_";
+                }
+                newString += " ";
             }
             
-            if (difficulty != 0 && index == num){
+            if (index == num){
                 item.setHidden(true);
             }
             index++;
         }
+        if(finished == true){
+            return "";
+        }
         return newString;
     }
-public string LoadScripture(){
+public void LoadScripture(){
         string[] fullScriptures = System.IO.File.ReadAllLines("scriptures.txt");
         Word word1 = new Word("Instantiate");
         
@@ -53,10 +59,7 @@ public string LoadScripture(){
         // Verse Text
         string[] verseText = fullScriptures[1].Split(" ");
         foreach (string word in verseText){
-            _scripture.Add(new Word(word));
-            
+            _scripture.Add(new Word(word));  
         }
-        return "tavares";
     }
-    
 }

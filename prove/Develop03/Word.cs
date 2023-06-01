@@ -1,5 +1,5 @@
 public class Word{
-    private string _word {get; set;}
+    private string _word;
     private Boolean _hidden;
 
     public Word(string word, Boolean hidden = false){
