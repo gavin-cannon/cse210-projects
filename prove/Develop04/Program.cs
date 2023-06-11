@@ -5,10 +5,10 @@ class Program
     static void Main(string[] args)
     {
 
-        for (int i = 5; i> 0; i--){
-            Console.WriteLine(i);
-            Thread.Sleep(1000);
-        }
+        // for (int i = 5; i> 0; i--){
+        //     Console.WriteLine(i);
+        //     Thread.Sleep(1000);
+        // }
 
         
 
@@ -52,27 +52,32 @@ class Program
             
         }
         else if (userInput == "3"){
+            Console.WriteLine("");
             Console.Write(Reflect1.GetName());
+            Thread.Sleep(2000);
             Console.WriteLine("");
             Console.Write(Reflect1.GetDescription());
+            Thread.Sleep(3000);
             Console.WriteLine("");
             Console.WriteLine("How long in seconds do you want to spend on this activity? ");
+            int seconds = int.Parse(Console.ReadLine());
             Console.WriteLine("");
             Console.WriteLine(Reflect1.GetOpeningMessage());
-            int seconds = int.Parse(Console.ReadLine());
 
             DateTime start = DateTime.Now;
             DateTime future = start.AddSeconds(seconds);
             string reflectPrompt = Reflect1.ReflectPrompts();
             Console.WriteLine(reflectPrompt);
+            
             while (start < future){
             string followUp = Reflect1.ReflectPrompts();
             Console.WriteLine("");
-            foreach (string s in animation1.GetSpinner())
+            List<string> spinner = animation1.GetSpinner();
+            foreach (string s in animation1.GetSpinner()){
                 Console.Write(s);
                 Thread.Sleep(1000);
                 Console.Write("\b \b");
-            }
+            }}
 
             
             
