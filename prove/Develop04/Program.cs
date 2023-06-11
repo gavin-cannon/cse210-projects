@@ -4,7 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-
+        // Exceeding Requirements:
+        // I created a new activity based on the relaxation technique of tensing and releasing your muscles.
+        // It follows all the same rules as the others. It is a sub class and has private member variables. 
+        // That exceeds the requirements.
         
 
         
