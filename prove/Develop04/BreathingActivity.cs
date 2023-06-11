@@ -4,8 +4,7 @@ public class BreathingActivity : Activity{
 
     public BreathingActivity(){
         _name = "Breathing Activity";
-        _description = "This activity will help you practice mindfulness through controlled breathing within the time limit.";
-        _duration = 50;
+        _description = "This exercise aims to promote relaxation by guiding you through a process of slow and intentional breathing. It encourages you to clear your mind and concentrate solely on your breath, helping you achieve a state of calmness and tranquility.";
     }
     public void Breath(){
         

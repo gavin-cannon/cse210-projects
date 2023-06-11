@@ -26,4 +26,10 @@ public class Activity{
     public string GetClosingMessage(){
         return _closingMessage;
     }
+    public void SetDuration(int seconds){
+        _duration = seconds;
+    }
+    public int GetDuration(){
+        return _duration;
+    }
 }

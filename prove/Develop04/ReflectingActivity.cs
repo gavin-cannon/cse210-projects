@@ -5,7 +5,6 @@ public class ReflectingActivity : Activity{
     public ReflectingActivity(){
         _name = "Reflecting Activity";
         _description = "This exercise encourages you to think about instances in your life where you demonstrated strength and perseverance. By doing so, you'll gain awareness of your own capabilities and understand how you can apply them to different areas of your life.";
-        _duration = 50;
 
     }
     public string ReflectPrompts(){
