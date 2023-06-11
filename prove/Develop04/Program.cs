@@ -14,7 +14,8 @@ class Program
         BreathingActivity Breath1 = new BreathingActivity();
         ListingActivity Listing1 = new ListingActivity();
         ReflectingActivity Reflect1 = new ReflectingActivity();
-        Animation animation1 = new Animation();
+        Animation Animation1 = new Animation();
+        MuscleRelaxationActivity Muscle1 = new MuscleRelaxationActivity();
         
        
 
@@ -109,9 +110,9 @@ class Program
             Console.WriteLine(followUp);
             Console.ReadLine();
 
-            List<string> spinner = animation1.GetSpinner();
+            List<string> spinner = Animation1.GetSpinner();
             
-            foreach (string s in animation1.GetSpinner()){
+            foreach (string s in Animation1.GetSpinner()){
                 Console.Write(s);
                 Thread.Sleep(1000);
                 Console.Write("\b \b");
@@ -127,6 +128,45 @@ class Program
         
         }
         else if (userInput == "4"){
+            Console.Write($"Welcome to the {Muscle1.GetName()}");
+            Console.WriteLine("");
+            Console.Write(Muscle1.GetDescription());
+            Console.WriteLine("");
+            Console.WriteLine("How long in seconds do you want to spend on this activity? ");
+            Muscle1.SetDuration((int.Parse(Console.ReadLine())));
+            Console.WriteLine("");
+            Console.WriteLine(Muscle1.GetOpeningMessage());
+            DateTime start = DateTime.Now;
+            DateTime future = start.AddSeconds(Muscle1.GetDuration());
+            DateTime currentTime = DateTime.Now;
+            while (currentTime < future){
+            Console.WriteLine();
+            string muscleGroup = Muscle1.GetMuscleGroup();
+            Console.WriteLine($"{Muscle1.GetBuildTension()} {muscleGroup}");
+            for (int i = 3; i> 0; i--){
+            Console.WriteLine(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            }
+
+            Console.WriteLine($"{Muscle1.GetHoldTension()}");
+            for (int i = 5; i> 0; i--){
+            Console.WriteLine(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            }
+            Console.WriteLine($"{Muscle1.GetReleaseTension()}");
+            for (int i = 3; i> 0; i--){
+            Console.WriteLine(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            }
+            currentTime = DateTime.Now;
+            }
+            Console.WriteLine("");
+            Console.WriteLine(Breath1.GetClosingMessage());
+        }
+        else if (userInput == "5"){
             Console.Write("Quitting");
             break;
         }

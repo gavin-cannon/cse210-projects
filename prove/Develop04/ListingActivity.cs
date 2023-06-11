@@ -5,7 +5,7 @@ public class ListingActivity : Activity{
 
 
     public ListingActivity(){
-        _name = "Listing";
+        _name = "Listing Activity";
         _description = "This activity is designed to encourage you to reflect on the positive aspects of your life by creating a list of as many things as possible within a specific area. By actively listing and acknowledging the good things in that particular area, you can cultivate a sense of gratitude and appreciation for the positive aspects of your life.";
     }
     public string ListPrompt(){
