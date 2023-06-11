@@ -1,5 +1,5 @@
 public class MuscleRelaxationActivity : Activity{
-    private List<string> _muscleGroups = new List<string>{"your Hands and Forearms", "your Shoulders and Neck", "your Face", "your Abdomen", " your Legs and Feet"};
+    private List<string> _muscleGroups = new List<string>{"your Hands and Forearms", "your Shoulders and Neck", "your Face", "your Abdomen", "your Legs and Feet"};
     private string _buildTension = "Gradually build tension in";
     private string _comfortably = "as comfortably as you can while keeping the rest of your body loose and relaxed.";
     private string _holdTension = "Hold the tension. Be mindful of the tight sensations that might be present.";
@@ -23,5 +23,8 @@ public class MuscleRelaxationActivity : Activity{
     }
     public string GetReleaseTension(){
         return _releaseTension;
+    }
+    public string GetComfortably(){
+        return _comfortably;
     }
 }
