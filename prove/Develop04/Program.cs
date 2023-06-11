@@ -68,16 +68,22 @@ class Program
             DateTime future = start.AddSeconds(seconds);
             string reflectPrompt = Reflect1.ReflectPrompts();
             Console.WriteLine(reflectPrompt);
+            Console.ReadLine();
             
             while (start < future){
-            string followUp = Reflect1.ReflectPrompts();
+            string followUp = Reflect1.ReflectFollowUps();
             Console.WriteLine("");
+            Console.WriteLine(followUp);
+            Console.ReadLine();
+
             List<string> spinner = animation1.GetSpinner();
+            
             foreach (string s in animation1.GetSpinner()){
                 Console.Write(s);
                 Thread.Sleep(1000);
                 Console.Write("\b \b");
-            }}
+            }
+            }
 
             
             
