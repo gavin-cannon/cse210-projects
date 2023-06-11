@@ -146,7 +146,7 @@ class Program
             Console.WriteLine();
             string muscleGroup = Muscle1.GetMuscleGroup();
             Console.WriteLine($"{Muscle1.GetBuildTension()} {muscleGroup}");
-            for (int i = 3; i> 0; i--){
+            for (int i = 4; i> 0; i--){
             Console.WriteLine(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
@@ -159,7 +159,7 @@ class Program
             Console.Write("\b \b");
             }
             Console.WriteLine($"{Muscle1.GetReleaseTension()}");
-            for (int i = 3; i> 0; i--){
+            for (int i = 4; i> 0; i--){
             Console.WriteLine(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
@@ -168,6 +168,7 @@ class Program
             }
             Console.WriteLine("");
             Console.WriteLine(Breath1.GetClosingMessage());
+            Thread.Sleep(2000);
         }
         else if (userInput == "5"){
             Console.Write("Quitting");
