@@ -58,6 +58,7 @@ class Program
 
         }
         else if (userInput == "2"){
+            int userEntryCount = 0;
             Console.Write($"Welcome to the {Listing1.GetName()}");
             Console.WriteLine("");
             Console.Write(Listing1.GetDescription());
@@ -72,8 +73,16 @@ class Program
             Thread.Sleep(1000);
             Console.Write("\b \b");
             }
+            Console.WriteLine("Begin");
+            DateTime start = DateTime.Now;
+            DateTime future = start.AddSeconds(Breath1.GetDuration());
+            DateTime currentTime = DateTime.Now;
+            while (currentTime < future){
             string userEntry = Console.ReadLine();
-            
+            userEntryCount += 1;
+            }
+            Console.WriteLine($"You wrote {userEntryCount} entries.");
+            Console.WriteLine(Listing1.GetClosingMessage());
         }
         else if (userInput == "3"){
             Console.WriteLine("");
