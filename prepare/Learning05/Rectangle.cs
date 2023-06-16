@@ -6,4 +6,8 @@ public class Rectangle : Shape{
     {
         return _length * _width;
     }
+    public Rectangle(string color, double length, double width):base(color){
+        _length = length;
+        _width = width;
+    } 
 }
