@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Checklist">
+    <Position X="2.25" Y="5.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAAAAAAIAgAAACAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Checklist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eternal">
+    <Position X="10.25" Y="6" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Eternal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goal">
+    <Position X="9.5" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIBIAAAAAAgAAgAAAIAAAAAAACACAgAAAAAEAAAA=</HashCode>
+      <FileName>Goal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Simple">
+    <Position X="16.75" Y="5.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAIAEAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Simple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Program">
+    <Position X="18.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu">
+    <Position X="14.75" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAYAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

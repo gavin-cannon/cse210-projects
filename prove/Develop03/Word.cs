@@ -14,4 +14,5 @@ public class Word{
     public void setHidden(Boolean hidden){
         _hidden = hidden;
     }
+    // return word if visible and return _ if it isnt
 }
