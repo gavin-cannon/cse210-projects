@@ -6,6 +6,9 @@ public abstract class CompletableGoal : Goal{
     }
     public CompletableGoal(){}
     public abstract bool GetCompleted();
+    public void SetCompleteTrue(){
+        _completed = true;
+    }
         
     
 }

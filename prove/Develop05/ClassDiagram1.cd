@@ -15,9 +15,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Goal">
-    <Position X="9.5" Y="0.5" Width="4.25" />
+    <Position X="8.5" Y="0.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAIBIAAAAAAgAAgAAAIAAAAAAACACAgAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAIBAAAAAAAAAAoAAAIAAAAAAAAAAAgAAAIAAABAA=</HashCode>
       <FileName>Goal.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -2,18 +2,29 @@ public class ChecklistGoal : CompletableGoal{
     private int _bonusPoints;
     private int _numberRequired;
     private int _currentNumberComplete;
-    public override void recordEvent()
-    {
-        
-    }
+
     public override bool GetCompleted()
     {
         return _completed;
     }
 
-    public override void addPoints()
+    public override int RecordEvent()
     {
-        
+        IncreaseCurrent();
+        if (_currentNumberComplete >= _numberRequired){
+            SetCompleteTrue();
+        }
+        if (_currentNumberComplete <= _numberRequired){
+            if (_currentNumberComplete == _numberRequired){
+                return _bonusPoints + _points;
+            }
+            else{
+                return _points;
+            }
+        }
+        else{
+            return 0;
+        }
     }
 
     public int GetBonus(){
@@ -26,7 +37,9 @@ public class ChecklistGoal : CompletableGoal{
     public int GetCurrent(){
         return _currentNumberComplete;
     }
-
+    public void IncreaseCurrent(){
+        _currentNumberComplete += 1;
+    }
 
     public ChecklistGoal(string name, string description, int baseScore, int bonusScore, int numberRequired){
         _name = name;

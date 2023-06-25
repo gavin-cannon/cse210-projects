@@ -2,8 +2,6 @@ public abstract class Goal{
     protected string _name;
     protected int _points;
     protected string _goalDescription;
-    public abstract void addPoints();
-    public abstract void recordEvent();
 
     
 
@@ -19,7 +17,7 @@ public abstract class Goal{
         return _goalDescription;
     }
 
-    public int RecordEvent(){
+    public virtual int RecordEvent(){
         return _points;
     }
     
