@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        
         Console.WriteLine("Hello Develop05 World!");
         MainMenu theMainMenu = new MainMenu();
         GoalMenu theGoalMenu = new GoalMenu();
@@ -50,11 +51,13 @@ class Program
 
         }
         else if (userInput == "2"){
+            Console.WriteLine();
+            Console.WriteLine($"Current Score: {DataMothership.GetScore()}");
             int goalNumber = 1;
             foreach (Goal goal in DataMothership.ShowGoals()){
                 if (goal is CompletableGoal){
                     if (goal is ChecklistGoal){
-                        ChecklistGoal checkGoal1 = new ChecklistGoal(goal);
+                        ChecklistGoal checkGoal1 = (ChecklistGoal)goal;
                         if (checkGoal1.GetCompleted() == true){
                         Console.WriteLine();
                         Console.WriteLine($"{goalNumber}. [X] {goal.GetName()} ({goal.GetDescription()}) -- Currently completed: {checkGoal1.GetCurrent()}/{checkGoal1.GetRequired()} ");
@@ -65,7 +68,7 @@ class Program
                     }
                     }
                     if (goal is SimpleGoal){
-                    SimpleGoal simpleGoal1 = new SimpleGoal(goal);
+                    SimpleGoal simpleGoal1 = (SimpleGoal)goal;
                     if (simpleGoal1.GetCompleted() == true){
                         Console.WriteLine();
                         Console.WriteLine($"{goalNumber}. [X] {goal.GetName()} {goal.GetDescription()}");
@@ -84,17 +87,20 @@ class Program
             }
         }
         else if (userInput == "3"){
-
+            DataMothership.Save(DataMothership.ShowGoals());
         }
         else if (userInput == "4"){
-            
+            DataMothership.Load(DataMothership);
         }
         else if (userInput == "5"){
+            
+        }
+        else if (userInput == "6"){
             
             break;
         }
         else{
-            Console.WriteLine("Error");
+            Console.WriteLine("Error: Please input a number 1-6.");
         }
         }
     }

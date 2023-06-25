@@ -1,5 +1,5 @@
 public class ChecklistGoal : CompletableGoal{
-    private int _bonusScore;
+    private int _bonusPoints;
     private int _numberRequired;
     private int _currentNumberComplete;
     public override void recordEvent()
@@ -16,6 +16,9 @@ public class ChecklistGoal : CompletableGoal{
         
     }
 
+    public int GetBonus(){
+        return _bonusPoints;
+    }
     public int GetRequired(){
         return _numberRequired;
     }
@@ -29,9 +32,24 @@ public class ChecklistGoal : CompletableGoal{
         _name = name;
         _goalDescription = description;
         _points = baseScore;
-        _bonusScore = bonusScore;
+        _bonusPoints = bonusScore;
         _numberRequired = numberRequired;
         _currentNumberComplete = 0;
+    }
+
+    public ChecklistGoal(string name, string description, int baseScore, int bonusScore, int numberRequired, int current, string completed){
+        _name = name;
+        _goalDescription = description;
+        _points = baseScore;
+        _bonusPoints = bonusScore;
+        _numberRequired = numberRequired;
+        _currentNumberComplete = current;
+        if (completed == "True"){
+            _completed = true;
+        }
+        else{
+            _completed = false;
+        }
     }
     public ChecklistGoal(Goal goal){
         _name = goal.GetName();

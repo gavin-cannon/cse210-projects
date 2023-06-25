@@ -1,0 +1,2 @@
+0
+ChecklistGoal,Disco Dance,I want to learn how dance disco style,75,700,False,0,5
