@@ -12,6 +12,9 @@ public class GoalData{
     public void CompleteGoal(int goalNumber){
         
     }
+    public void IncreaseScore(int points){
+        _score += points;
+    }
     public List<Goal> ShowGoals(){
         return _goals;
     }

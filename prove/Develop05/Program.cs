@@ -9,6 +9,7 @@ class Program
         MainMenu theMainMenu = new MainMenu();
         GoalMenu theGoalMenu = new GoalMenu();
         GoalData DataMothership = new GoalData();
+        RecordMenu theRecordMenu = new RecordMenu();
         
         while(true){
             string menuString = theMainMenu.displayMenu();
@@ -93,7 +94,17 @@ class Program
             DataMothership.Load(DataMothership);
         }
         else if (userInput == "5"){
-            
+            Console.WriteLine(theRecordMenu.displayMenu());
+            int goalNumber = 1;
+            foreach (Goal goal in DataMothership.ShowGoals()){
+                Console.WriteLine($"{goalNumber}. {goal.GetName()}");
+            }
+            Console.WriteLine("Which goal did you accomplish?");
+            theRecordMenu.setAnswer(Console.ReadLine());
+            List<Goal> dataList = DataMothership.ShowGoals();
+            Goal index = dataList[int.Parse(theRecordMenu.getAnswer())- 1];
+            int pointsToAdd = index.RecordEvent();
+            DataMothership.IncreaseScore(pointsToAdd);
         }
         else if (userInput == "6"){
             
