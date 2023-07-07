@@ -4,161 +4,275 @@ class Program
 {
     static void Main(string[] args)
     {
-        Menu mainMenu = new Menu();
+        MainMenu mainMenu = new MainMenu();
+        MovieDatabase movieMothership = new MovieDatabase();
         DecadeMenu decadeMenu = new DecadeMenu();
+        GenreMenu genreMenu = new GenreMenu();
+        RatingMenu ratingMenu = new RatingMenu();
+        movieMothership.Load();
         while (true)
         {
-            string menuString = menu1.displayMenu();
+            string menuString = mainMenu.DisplayMenu();
             Console.WriteLine();
             Console.WriteLine(menuString);
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                Console.WriteLine(decadeMenu.displayMenu());
-                decadeMenu.setAnswer(Console.ReadLine());
-                if (decadeMenu.getAnswer() == "1")
+                Console.WriteLine(decadeMenu.DisplayMenu());
+                decadeMenu.SetAnswer(Console.ReadLine());
+                List<Movie> movies = movieMothership.GetMovies();
+                int number = 1;
+                if (decadeMenu.GetAnswer() == "1")
                 {
-                    
-                    
+                    Console.WriteLine();
+                    Console.WriteLine("Here are some of my favorite movies from the 2020s so far!");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie is Movie2020s){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
                 }
-                else if (decadeMenu.getAnswer() == "2")
+                else if (decadeMenu.GetAnswer() == "2")
                 {
-                    Console.WriteLine("What is the name of your goal? ");
-                    string eternalName = Console.ReadLine();
-                    Console.WriteLine("Give a brief explanation of your goal. ");
-                    string eternalBrief = Console.ReadLine();
-                    Console.WriteLine("How many points is this goal worth? ");
-                    int eternalPointage = int.Parse(Console.ReadLine());
-                    dataMothership.AddGoal(new EternalGoal(eternalName, eternalBrief, eternalPointage));
+                    Console.WriteLine();
+                    Console.WriteLine("Here are some of my favorite movies from the 2010s!");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie is Movie2010s){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
                 }
-                else if (mainMenu.getAnswer() == "3")
+                else if (decadeMenu.GetAnswer() == "3")
                 {
-                    Console.WriteLine("What is the name of your goal? ");
-                    string checkName = Console.ReadLine();
-                    Console.WriteLine("Give a brief explanation of your goal. ");
-                    string checkBrief = Console.ReadLine();
-                    Console.WriteLine("How many points is this goal worth? ");
-                    int checkPointage = int.Parse(Console.ReadLine());
-                    Console.WriteLine("How many times must this goal be completed for a bonus? ");
-                    int checkBonusRequirement = int.Parse(Console.ReadLine());
-                    Console.WriteLine("How many points are to be awarded for reaching the bonus goal? ");
-                    int checkBonusPoints = int.Parse(Console.ReadLine());
-                    dataMothership.AddGoal(new ChecklistGoal(checkName, checkBrief, checkPointage, checkBonusPoints, checkBonusRequirement));
+                    Console.WriteLine();
+                    Console.WriteLine("Here are some of my favorite movies from the 2000s!");
+                    Console.WriteLine();
+                   foreach(Movie movie in movies){
+                        if (movie is Movie2000s){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (decadeMenu.GetAnswer() == "4")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Here are some of my favorite movies from the 1990s!");
+                    Console.WriteLine();
+                   foreach(Movie movie in movies){
+                        if (movie is Movie1990s){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (decadeMenu.GetAnswer() == "5")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Here are some of my favorite movies from the 1980s!");
+                    Console.WriteLine();
+                   foreach(Movie movie in movies){
+                        if (movie is Movie1980s){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (decadeMenu.GetAnswer() == "6")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Here are some of my favorite movies from the 1970s!");
+                    Console.WriteLine();
+                   foreach(Movie movie in movies){
+                        if (movie is Movie1970s){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (decadeMenu.GetAnswer() == "7")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Here are some of my favorite movies from the 1960s!");
+                    Console.WriteLine();
+                   foreach(Movie movie in movies){
+                        if (movie is Movie1960s){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
                 }
             }
             else if (userInput == "2")
             {
-                Console.WriteLine();
-                Console.WriteLine($"Current Score: {dataMothership.GetScore()}");
-                int goalNumber = 1;
-                foreach (Goal goal in dataMothership.ShowGoals())
-                {
-                    if (goal is CompletableGoal)
-                    {
-                        if (goal is ChecklistGoal)
-                        {
-                            ChecklistGoal checkGoal1 = (ChecklistGoal)goal;
-                            if (checkGoal1.GetCompleted() == true)
-                            {
-                                Console.WriteLine();
-                                Console.WriteLine($"{goalNumber}. [X] {goal.GetName()} ({goal.GetDescription()}) -- Currently completed: {checkGoal1.GetCurrent()}/{checkGoal1.GetRequired()} ");
-                                goalNumber += 1;
-                            }
-                            else
-                            {
-                                Console.WriteLine();
-                                Console.WriteLine($"{goalNumber}. [] {goal.GetName()} ({goal.GetDescription()}) -- Currently completed: {checkGoal1.GetCurrent()}/{checkGoal1.GetRequired()}");
-                                goalNumber += 1;
-                            }
-                        }
-                        if (goal is SimpleGoal)
-                        {
-                            SimpleGoal simpleGoal1 = (SimpleGoal)goal;
-                            if (simpleGoal1.GetCompleted() == true)
-                            {
-                                Console.WriteLine();
-                                Console.WriteLine($"{goalNumber}. [X] {goal.GetName()} ({goal.GetDescription()})");
-                                goalNumber += 1;
-                            }
-                            else
-                            {
-                                Console.WriteLine();
-                                Console.WriteLine($"{goalNumber}. [] {goal.GetName()} ({goal.GetDescription()})");
-                                goalNumber += 1;
-                            }
+                Console.WriteLine(genreMenu.DisplayMenu());
+                genreMenu.SetAnswer(Console.ReadLine());
+                List<Movie> movies = movieMothership.GetMovies();
+                int number = 1;
+                if (genreMenu.GetAnswer() == "1"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the RomCom movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "RomCom"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
                         }
                     }
-                    else
-                    {
-                        Console.WriteLine();
-                        Console.WriteLine($"{goalNumber}. [] {goal.GetName()} ({goal.GetDescription()})");
-                        goalNumber += 1;
+                    
+                }
+                else if (genreMenu.GetAnswer() == "2"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Family movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Family"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
                     }
-
+                }
+                else if (genreMenu.GetAnswer() == "3"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Musical movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Musical"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (genreMenu.GetAnswer() == "4"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Comedy movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Comedy"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (genreMenu.GetAnswer() == "5"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Thriller movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Thriller"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (genreMenu.GetAnswer() == "6"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Mystery movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Mystery"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (genreMenu.GetAnswer() == "7"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Documentary movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Documentary"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (genreMenu.GetAnswer() == "8"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Adventure movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Adventure"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (genreMenu.GetAnswer() == "9"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Drama movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Drama"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
+                }
+                else if (genreMenu.GetAnswer() == "10"){
+                    Console.WriteLine();
+                    Console.WriteLine("Here are all the Fantasy movies:");
+                    Console.WriteLine();
+                    foreach(Movie movie in movies){
+                        if (movie.GetGenre() == "Fantasy"){
+                            Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                            Console.WriteLine();
+                            number += 1;
+                        }
+                    }
                 }
             }
             else if (userInput == "3")
             {
-                dataMothership.Save(dataMothership.ShowGoals());
+                Console.WriteLine(ratingMenu.DisplayMenu());
+                ratingMenu.SetAnswer(Console.ReadLine());
+                List<Movie> movies = movieMothership.GetMovies();
+                int number = 1;
+                if(ratingMenu.GetAnswer() == "1"){
+                    movies.Sort((x, y) => y.GetRating().CompareTo(x.GetRating()));
+                    foreach(Movie movie in movies){
+                        Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                        number += 1;
+                    }
+                }
+                else if(ratingMenu.GetAnswer() == "2"){
+                    movies.Sort((x, y) => x.GetRating().CompareTo(y.GetRating()));
+                    foreach(Movie movie in movies){
+                        Console.WriteLine($"{number}. {movie.GetName()}    \nYear: {movie.GetYear()}    \nGenre: {movie.GetGenre()}    \nDirector: {movie.GetDirector()}    \nMy rating: {movie.GetRating()}/5");
+                        number += 1;
+                }
+                }
+                
             }
             else if (userInput == "4")
             {
-                dataMothership.Load(dataMothership);
+                Console.Write("Quitting");
+                for (int i = 3; i> 0; i--){
+                Console.Write(".");
+                Thread.Sleep(1000);
             }
-            else if (userInput == "5")
-            {
-                Console.WriteLine(theRecordMenu.displayMenu());
-                int goalNumber = 1;
-                foreach (Goal goal in dataMothership.ShowGoals())
-                {
-                    Console.WriteLine($"{goalNumber}. {goal.GetName()}");
-                    goalNumber += 1;
-                }
-                Console.WriteLine("Which goal did you accomplish?");
-                theRecordMenu.setAnswer(Console.ReadLine());
-                List<Goal> dataList = dataMothership.ShowGoals();
-                Goal index = dataList[int.Parse(theRecordMenu.getAnswer()) - 1];
-                if (index is ChecklistGoal)
-                {
-                    Console.WriteLine("How many times did you complete this goal?");
-                    int numberOfCompletion = int.Parse(Console.ReadLine());
-                    for (int i = 0; i < numberOfCompletion; i++)
-                    {
-                        int pointsToAdd = index.RecordEvent();
-                        dataMothership.IncreaseScore(pointsToAdd);
-                    }
-                }
-                else
-                {
-                    if (index is SimpleGoal)
-                    {
-                        SimpleGoal simpleGoal1 = (SimpleGoal)index;
-                        if (simpleGoal1.GetCompleted() == false)
-                        {
-                            dataMothership.IncreaseScore(simpleGoal1.RecordEvent());
-                        }
-                        else
-                        {
-                            Console.WriteLine("This goal is already completed.");
-                        }
-                    }
-                    else
-                    {
-                        int pointsToAdd = index.RecordEvent();
-                        dataMothership.IncreaseScore(pointsToAdd);
-                    }
-                }
-
-            }
-            else if (userInput == "6")
-            {
                 break;
             }
-            else
-            {
-                Console.WriteLine("Error: Please input a number 1-6.");
-            }
         }
-
     }
 }
