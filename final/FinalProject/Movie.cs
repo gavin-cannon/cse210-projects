@@ -1,23 +1,19 @@
-public abstract class Movie{
-    protected string _name;
-    protected string _genre;
-    protected string _director;
-    protected float _rating;
-    protected int _year;
+public class Movie : Art
+{
+    private string _genre;
+    private float _rating;
 
-    public string GetName(){
-        return _name;
+    public override string ToString()
+    {
+        return $"{_title} \nGenre:{_genre} movie. \nDirected by: {_artist}. \nReleased in {_year}. \nMy rating: {_rating}";
     }
-    public int GetYear(){
-        return _year;
-    }
-    public string GetDirector(){
-        return _director;
-    }
-    public float GetRating(){
-        return _rating;
-    }
-    public string GetGenre(){
-        return _genre;
+    public Movie() { }
+    public Movie(string title, string artist, int year, float rating, string genre)
+    {
+        _title = title;
+        _artist = artist;
+        _year = year;
+        _rating = rating;
+        _genre = genre;
     }
 }
