@@ -8,9 +8,7 @@ class Program
         DataManager artDataManager = new DataManager();
         MediumMenu mediumMenu = new MediumMenu();
         YearMenu yearMenu = new YearMenu();
-        artDataManager.LoadMovies();
-        artDataManager.LoadMusic();
-        artDataManager.LoadPaintings();
+        artDataManager.LoadArt();
         while (true)
         {
             string menuString = mainMenu.DisplayMenu();

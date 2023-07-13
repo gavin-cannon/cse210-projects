@@ -13,5 +13,6 @@ public abstract class Menu{
     public Menu(){}
     public Menu(string menu){
         _menuPrompt = menu;
+        _menuAnswer = "";
     }
 }   

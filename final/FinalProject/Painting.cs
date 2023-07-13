@@ -4,13 +4,10 @@ public class Painting : Art
 
     public override string ToString()
     {
-        return $"{_title} \nArt Movement:{_artMovement} movement. \nPainted by: {_artist}. \nDated as {_year}.";
+        return $"{base.ToString()} \nArt Movement: {_artMovement} movement.";
     }
-    public Painting(string title, string artist, int year, string movement)
+    public Painting(string title, string artist, int year, string movement) : base(title, artist, year)
     {
-        _title = title;
-        _artist = artist;
-        _year = year;
         _artMovement = movement;
     }
 }

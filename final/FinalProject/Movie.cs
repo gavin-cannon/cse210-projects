@@ -5,14 +5,11 @@ public class Movie : Art
 
     public override string ToString()
     {
-        return $"{_title} \nGenre:{_genre} movie. \nDirected by: {_artist}. \nReleased in {_year}. \nMy rating: {_rating}";
+        return $"{base.ToString()}\nGenre: {_genre} movie. \nMy rating: {_rating}";
     }
     public Movie() { }
-    public Movie(string title, string artist, int year, float rating, string genre)
+    public Movie(string title, string artist, int year, float rating, string genre) :base(title, artist, year)
     {
-        _title = title;
-        _artist = artist;
-        _year = year;
         _rating = rating;
         _genre = genre;
     }

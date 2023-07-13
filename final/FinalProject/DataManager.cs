@@ -10,7 +10,8 @@ public class DataManager
         _artPieces.Add(art);
     }
     public DataManager() { }
-    public void LoadMovies()
+
+    public void LoadArt()
     {
         string[] movieList = System.IO.File.ReadAllLines("movies.txt");
         foreach (string line in movieList)
@@ -23,9 +24,6 @@ public class DataManager
             string genre = movie[4];
             AddArt(new Movie(movieTitle, director, year, rating, genre));
         }
-    }
-    public void LoadPaintings()
-    {
         string[] paintingList = System.IO.File.ReadAllLines("painting.txt");
         foreach (string line in paintingList)
         {
@@ -36,9 +34,6 @@ public class DataManager
             string movement = painting[3];
             AddArt(new Painting(paintingTitle, artist, year, movement));
         }
-    }
-    public void LoadMusic()
-    {
         string[] musicList = System.IO.File.ReadAllLines("musics.txt");
         foreach (string line in musicList)
         {

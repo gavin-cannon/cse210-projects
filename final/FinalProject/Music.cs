@@ -4,13 +4,10 @@ public class Music : Art
 
     public override string ToString()
     {
-        return $"{_title} is piece in the key of {_musicalKey}. \nComposed by: {_artist}. \nFinished in {_year}.";
+        return $"{base.ToString()} \nKey: {_musicalKey}.";
     }
-    public Music(string title, string artist, int year, string key)
+    public Music(string title, string artist, int year, string key) :base(title, artist, year)
     {
-        _title = title;
-        _artist = artist;
-        _year = year;
         _musicalKey = key;
     }
 }
