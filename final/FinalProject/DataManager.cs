@@ -45,4 +45,36 @@ public class DataManager
             AddArt(new Music(musicTitle, artist, year, key));
         }
     }
+
+    public int GetArtLength(){
+        return _artPieces.Count;
+    }
+
+    public void SortListForward(){
+        _artPieces.Sort((x, y) => y.GetYear().CompareTo(x.GetYear()));
+    }
+    public void SortListReverse(){
+        _artPieces.Sort((x, y) => x.GetYear().CompareTo(y.GetYear()));
+    }
+    public string GetArtPieceString(int listNumber){
+        return _artPieces[listNumber].ToString();
+    }
+    public string GetMovieString(int listNumber){
+        if (_artPieces[listNumber] is Movie){
+            return _artPieces[listNumber].ToString();
+        }
+        return "None";
+    }
+    public string GetPaintingString(int listNumber){
+        if (_artPieces[listNumber] is Painting){
+            return _artPieces[listNumber].ToString();
+        }
+        return "None";
+    }
+    public string GetMusicString(int listNumber){
+        if (_artPieces[listNumber] is Music){
+            return _artPieces[listNumber].ToString();
+        }
+        return "None";
+    }
 }

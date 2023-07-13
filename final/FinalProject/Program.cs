@@ -17,63 +17,59 @@ class Program
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                List<Art> artCollection = artDataManager.GetArt();
                 Console.WriteLine(yearMenu.DisplayMenu());
                 yearMenu.SetAnswer(Console.ReadLine());
                 if (yearMenu.GetAnswer() == "1")
                 {
                     int number = 1;
-                    artCollection.Sort((x, y) => y.GetYear().CompareTo(x.GetYear()));
-                    foreach (Art artPiece in artCollection)
-                    {
-                        Console.WriteLine($"\n{number}. {artPiece.ToString()}");
+                    artDataManager.SortListForward();
+                    
+                    
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
+                        Console.WriteLine($"\n{number}. {artDataManager.GetArtPieceString(i)}");
                         number += 1;
                     }
+                    
                 }
                 else if (yearMenu.GetAnswer() == "2")
                 {
                     int number = 1;
-                    artCollection.Sort((x, y) => x.GetYear().CompareTo(y.GetYear()));
-                    foreach (Art artPiece in artCollection)
-                    {
-                        Console.WriteLine($"\n{number}. {artPiece.ToString()}");
+                    artDataManager.SortListReverse();
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
+                        Console.WriteLine($"\n{number}. {artDataManager.GetArtPieceString(i)}");
                         number += 1;
                     }
                 }
             }
             else if (userInput == "2")
             {
-                List<Art> artCollection = artDataManager.GetArt();
                 Console.WriteLine(mediumMenu.DisplayMenu());
                 mediumMenu.SetAnswer(Console.ReadLine());
                 if (mediumMenu.GetAnswer() == "1")
                 {
-                    foreach (Art artPiece in artCollection)
-                    {
-                        if (artPiece is Movie)
-                        {
-                            Console.WriteLine($"\n{artPiece.ToString()}");
-                        }
+                    int number = 1;
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
+                        if (artDataManager.GetMovieString(i) != "None"){
+                        Console.WriteLine($"\n{number}. {artDataManager.GetMovieString(i)}");
+                        number += 1;}
                     }
                 }
                 else if (mediumMenu.GetAnswer() == "2")
                 {
-                    foreach (Art artPiece in artCollection)
-                    {
-                        if (artPiece is Painting)
-                        {
-                            Console.WriteLine($"\n{artPiece.ToString()}");
-                        }
+                    int number = 1;
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
+                        if (artDataManager.GetPaintingString(i) != "None"){
+                        Console.WriteLine($"\n{number}. {artDataManager.GetPaintingString(i)}");
+                        number += 1;}
                     }
                 }
                 else if (mediumMenu.GetAnswer() == "3")
                 {
-                    foreach (Art artPiece in artCollection)
-                    {
-                        if (artPiece is Music)
-                        {
-                            Console.WriteLine($"\n{artPiece.ToString()}");
-                        }
+                    int number = 1;
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
+                        if (artDataManager.GetMusicString(i) != "None"){
+                        Console.WriteLine($"\n{number}. {artDataManager.GetMusicString(i)}");
+                        number += 1;}
                     }
                 }
             }
