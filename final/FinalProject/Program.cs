@@ -23,19 +23,21 @@ class Program
                 {
                     int number = 1;
                     artDataManager.SortListForward();
-                    
-                    
-                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
+
+
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++)
+                    {
                         Console.WriteLine($"\n{number}. {artDataManager.GetArtPieceString(i)}");
                         number += 1;
                     }
-                    
+
                 }
                 else if (yearMenu.GetAnswer() == "2")
                 {
                     int number = 1;
                     artDataManager.SortListReverse();
-                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++)
+                    {
                         Console.WriteLine($"\n{number}. {artDataManager.GetArtPieceString(i)}");
                         number += 1;
                     }
@@ -48,28 +50,37 @@ class Program
                 if (mediumMenu.GetAnswer() == "1")
                 {
                     int number = 1;
-                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
-                        if (artDataManager.GetMovieString(i) != "None"){
-                        Console.WriteLine($"\n{number}. {artDataManager.GetMovieString(i)}");
-                        number += 1;}
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++)
+                    {
+                        if (artDataManager.GetMovieString(i) != "None")
+                        {
+                            Console.WriteLine($"\n{number}. {artDataManager.GetMovieString(i)}");
+                            number += 1;
+                        }
                     }
                 }
                 else if (mediumMenu.GetAnswer() == "2")
                 {
                     int number = 1;
-                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
-                        if (artDataManager.GetPaintingString(i) != "None"){
-                        Console.WriteLine($"\n{number}. {artDataManager.GetPaintingString(i)}");
-                        number += 1;}
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++)
+                    {
+                        if (artDataManager.GetPaintingString(i) != "None")
+                        {
+                            Console.WriteLine($"\n{number}. {artDataManager.GetPaintingString(i)}");
+                            number += 1;
+                        }
                     }
                 }
                 else if (mediumMenu.GetAnswer() == "3")
                 {
                     int number = 1;
-                    for (int i = 0; i < artDataManager.GetArtLength(); i++){
-                        if (artDataManager.GetMusicString(i) != "None"){
-                        Console.WriteLine($"\n{number}. {artDataManager.GetMusicString(i)}");
-                        number += 1;}
+                    for (int i = 0; i < artDataManager.GetArtLength(); i++)
+                    {
+                        if (artDataManager.GetMusicString(i) != "None")
+                        {
+                            Console.WriteLine($"\n{number}. {artDataManager.GetMusicString(i)}");
+                            number += 1;
+                        }
                     }
                 }
             }

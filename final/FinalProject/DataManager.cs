@@ -18,7 +18,8 @@ public class DataManager
         {
             string[] art = line.Split(",");
             string artType = art[0];
-            if (artType == "Movie"){
+            if (artType == "Movie")
+            {
                 string movieTitle = art[1];
                 int year = Int32.Parse(art[2]);
                 string director = art[3];
@@ -26,14 +27,16 @@ public class DataManager
                 string genre = art[5];
                 AddArt(new Movie(movieTitle, director, year, rating, genre));
             }
-            else if (artType == "Painting"){
+            else if (artType == "Painting")
+            {
                 string paintingTitle = art[1];
                 int year = Int32.Parse(art[3]);
                 string artist = art[2];
                 string movement = art[4];
                 AddArt(new Painting(paintingTitle, artist, year, movement));
             }
-            else if (artType == "Music"){
+            else if (artType == "Music")
+            {
                 string musicTitle = art[1];
                 int year = Int32.Parse(art[4]);
                 string artist = art[3];
@@ -43,33 +46,43 @@ public class DataManager
         }
     }
 
-    public int GetArtLength(){
+    public int GetArtLength()
+    {
         return _artPieces.Count;
     }
 
-    public void SortListForward(){
+    public void SortListForward()
+    {
         _artPieces.Sort((x, y) => y.GetYear().CompareTo(x.GetYear()));
     }
-    public void SortListReverse(){
+    public void SortListReverse()
+    {
         _artPieces.Sort((x, y) => x.GetYear().CompareTo(y.GetYear()));
     }
-    public string GetArtPieceString(int listNumber){
+    public string GetArtPieceString(int listNumber)
+    {
         return _artPieces[listNumber].ToString();
     }
-    public string GetMovieString(int listNumber){
-        if (_artPieces[listNumber] is Movie){
+    public string GetMovieString(int listNumber)
+    {
+        if (_artPieces[listNumber] is Movie)
+        {
             return _artPieces[listNumber].ToString();
         }
         return "None";
     }
-    public string GetPaintingString(int listNumber){
-        if (_artPieces[listNumber] is Painting){
+    public string GetPaintingString(int listNumber)
+    {
+        if (_artPieces[listNumber] is Painting)
+        {
             return _artPieces[listNumber].ToString();
         }
         return "None";
     }
-    public string GetMusicString(int listNumber){
-        if (_artPieces[listNumber] is Music){
+    public string GetMusicString(int listNumber)
+    {
+        if (_artPieces[listNumber] is Music)
+        {
             return _artPieces[listNumber].ToString();
         }
         return "None";

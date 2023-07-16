@@ -6,7 +6,7 @@ public class Music : Art
     {
         return $"{base.ToString()} \nKey: {_musicalKey}.";
     }
-    public Music(string title, string artist, int year, string key) :base(title, artist, year)
+    public Music(string title, string artist, int year, string key) : base(title, artist, year)
     {
         _musicalKey = key;
     }

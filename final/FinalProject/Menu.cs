@@ -1,18 +1,23 @@
-public abstract class Menu{
+public abstract class Menu
+{
     protected string _menuPrompt;
     private string _menuAnswer;
-    public string DisplayMenu(){
+    public string DisplayMenu()
+    {
         return _menuPrompt;
     }
-    public void SetAnswer(string userInput){
+    public void SetAnswer(string userInput)
+    {
         _menuAnswer = userInput;
     }
-    public string GetAnswer(){
+    public string GetAnswer()
+    {
         return _menuAnswer;
     }
-    public Menu(){}
-    public Menu(string menu){
+    public Menu() { }
+    public Menu(string menu)
+    {
         _menuPrompt = menu;
         _menuAnswer = "";
     }
-}   
+}
