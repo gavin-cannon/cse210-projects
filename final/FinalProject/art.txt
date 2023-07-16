@@ -1,0 +1,70 @@
+Movie,Breakfast at Tiffany's,1961,Blake Edwards,4,RomCom
+Movie,Mary Poppins,1964,Robert Stevenson,4,Family
+Movie,The Graduate,1967,Mike Nichols,4,RomCom
+Movie,Blue Hawaii,1961,Norman Taurog,3.5,Musical
+Movie,The Producers,1967,Mel Brooks,3.5,Comedy
+Movie,Jaws,1975,Steven Spielberg,5,Thriller
+Movie,Chinatown,1974,Roman Polanski,4.5,Mystery
+Movie,Lost and Found: The Story of Cook's Anchor,1979,David Lean,4,Documentary
+Movie,The Three Musketeers,1973,Richard Lester,4,Adventure
+Movie,Blazing Saddles,1974,Mel Brooks,4,Comedy
+Movie,The Breakfast Club,1985,John Hughes,5,Comedy
+Movie,Kiki's Delivery Service,1989,Hayao Miyazaki,5,Fantasy
+Movie,My Neighbor Totoro,1988,Hayao Miyazaki,5,Fantasy
+Movie,Tootsie,1982,Sydney Pollack,4,Comedy
+Movie,The Shining,1980,Stanley Kubrick,4,Thriller
+Movie,Porco Rosso,1992,Hayao Miyazaki,5,Adventure
+Movie,Jurassic Park,1993,Steven Spielberg,4.5,Adventure
+Movie,Bottle Rocket,1996,Wes Anderson,4.5,Comedy
+Movie,Joe Versus the Volcano,1990,John Patrick Shanley,4,RomCom
+Movie,The Fugitive,1993,Andrew Davis,4,Drama
+Movie,Spirited Away,2001,Hayao Miyazaki,5,Fantasy
+Movie,Howl's Moving Castle,2004,Hayao Miyazaki,5,Fantasy
+Movie,Fantastic Mr. Fox,2009,Wes Anderson,5,Comedy
+Movie,Hot Fuzz,2007,Edgar Wright,4.5,Comedy
+Movie,O Brother Where Art Thou?,2000,Joel Coen,4,Adventure
+Movie,La La Land,2016,Damien Chazelle,5,Musical
+Movie,Midnight in Paris,2011,Woody Allen,4.5,Fantasy
+Movie,Once Upon a Time... in Hollywood,2019,Quentin Tarantino,4.5,Drama
+Movie,The Wind Rises,2013,Hayao Miyazaki,4,Drama
+Movie,Whiplash,2014,Damien Chazelle,4,Drama
+Movie,The Mitchells vs. The Machines,2021,Mike Rianda,5,Adventure
+Movie,Luca,2021,Enrico Casarosa,5,Family
+Movie,The Green Knight,2021,David Lowery,4.5,Adventure
+Movie,West Side Story,2021,Steven Spielberg,4,Musical
+Movie,Guardians of the Galaxy Vol.3,2023,James Gunn,4,Adventure
+Painting,The Starry Night,Vincent van Gogh,1889,Post-Impressionism
+Painting,Mona Lisa,Leonardo da Vinci,1503,Renaissance
+Painting,The Persistence of Memory,Salvador Dalí,1931,Surrealism
+Painting,Guernica,Pablo Picasso,1937,Cubism
+Painting,The Scream,Edvard Munch,1893,Symbolism
+Painting,The Last Supper,Leonardo da Vinci,1498,Renaissance
+Painting,Girl with a Pearl Earring,Johannes Vermeer,1665,Baroque
+Painting,The Birth of Venus,Sandro Botticelli,1486,Early Renaissance
+Painting,The Creation of Adam,Michelangelo,1508,High Renaissance
+Painting,Nighthawks,Edward Hopper,1942,American Realism
+Painting,Les Demoiselles d'Avignon,Pablo Picasso,1907,Cubism
+Painting,The Birth of Venus,Alexandre Cabanel,1863,Academicism
+Painting,The Night Watch,Rembrandt van Rijn,1642,Dutch Golden Age
+Painting,Les Demoiselles d'Avignon,Pablo Picasso,1907,Cubism
+Painting,American Gothic,Grant Wood,1930,Regionalism
+Music,Symphony No. 5,C minor,Ludwig van Beethoven,1808
+Music,The Four Seasons,E major,Antonio Vivaldi,1723
+Music,Symphony No. 9 "From the New World",E minor,Antonín Dvořák,1893
+Music,Für Elise,A minor,Ludwig van Beethoven,1810
+Music,Symphony No. 9 "Choral",D minor, Ludwig van Beethoven,1824
+Music,Canon in D,D major,Johann Pachelbel,1680
+Music,Symphony No. 40,G minor,Wolfgang Amadeus Mozart,1788
+Music,Moonlight Sonata,C-sharp minor,Ludwig van Beethoven,1801
+Music,Symphony No. 6 "Pastoral",F major,Ludwig van Beethoven,1808
+Music,Symphony No. 3 "Eroica",E-flat major,Ludwig van Beethoven,1803
+Music,Symphony No. 7, A major,Ludwig van Beethoven,1812
+Music,The Magic Flute,E-flat major,Wolfgang Amadeus Mozart,1791
+Music,Symphony No. 5,D minor,Dmitri Shostakovich,1937
+Music,Clair de Lune,D-flat major,Claude Debussy,1905
+Music,Symphony No. 41 "Jupiter",C major,Wolfgang Amadeus Mozart,1788
+Music,Symphony No. 9 "From the New World",E minor,Antonín Dvořák,1893
+Music,Symphony No. 5, B-flat major,Franz Schubert,1816
+Music,Symphony No. 94 "Surprise",G major,Joseph Haydn,1791
+Music,Symphony No. 1,C major,Johannes Brahms,1876
+Music,Symphony No. 5,C-sharp minor,Gustav Mahler,1902

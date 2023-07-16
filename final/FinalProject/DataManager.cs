@@ -13,36 +13,33 @@ public class DataManager
 
     public void LoadArt()
     {
-        string[] movieList = System.IO.File.ReadAllLines("movies.txt");
-        foreach (string line in movieList)
+        string[] artList = System.IO.File.ReadAllLines("art.txt");
+        foreach (string line in artList)
         {
-            string[] movie = line.Split(",");
-            string movieTitle = movie[0];
-            int year = Int32.Parse(movie[1]);
-            string director = movie[2];
-            float rating = float.Parse(movie[3]);
-            string genre = movie[4];
-            AddArt(new Movie(movieTitle, director, year, rating, genre));
-        }
-        string[] paintingList = System.IO.File.ReadAllLines("painting.txt");
-        foreach (string line in paintingList)
-        {
-            string[] painting = line.Split(",");
-            string paintingTitle = painting[0];
-            int year = Int32.Parse(painting[2]);
-            string artist = painting[1];
-            string movement = painting[3];
-            AddArt(new Painting(paintingTitle, artist, year, movement));
-        }
-        string[] musicList = System.IO.File.ReadAllLines("musics.txt");
-        foreach (string line in musicList)
-        {
-            string[] music = line.Split(",");
-            string musicTitle = music[0];
-            int year = Int32.Parse(music[3]);
-            string artist = music[2];
-            string key = music[1];
-            AddArt(new Music(musicTitle, artist, year, key));
+            string[] art = line.Split(",");
+            string artType = art[0];
+            if (artType == "Movie"){
+                string movieTitle = art[1];
+                int year = Int32.Parse(art[2]);
+                string director = art[3];
+                float rating = float.Parse(art[4]);
+                string genre = art[5];
+                AddArt(new Movie(movieTitle, director, year, rating, genre));
+            }
+            else if (artType == "Painting"){
+                string paintingTitle = art[1];
+                int year = Int32.Parse(art[3]);
+                string artist = art[2];
+                string movement = art[4];
+                AddArt(new Painting(paintingTitle, artist, year, movement));
+            }
+            else if (artType == "Music"){
+                string musicTitle = art[1];
+                int year = Int32.Parse(art[4]);
+                string artist = art[3];
+                string key = art[2];
+                AddArt(new Music(musicTitle, artist, year, key));
+            }
         }
     }
 
